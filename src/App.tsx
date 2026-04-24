@@ -7,6 +7,7 @@ import Assured from './pages/Assured';
 import Atmanirbhar from './pages/Atmanirbhar';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import FAQ from './pages/FAQ';
 import NotFound from './pages/NotFound';
 
 export default function App() {
@@ -20,6 +21,7 @@ export default function App() {
         <Route path="atmanirbhar" element={<Atmanirbhar />} />
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="faq" element={<FAQ />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

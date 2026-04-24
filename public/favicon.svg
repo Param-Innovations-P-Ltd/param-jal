@@ -1,10 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#36b2f6"/>
-      <stop offset="100%" stop-color="#02619f"/>
-    </linearGradient>
-  </defs>
-  <path d="M32 4 C 18 24, 10 36, 10 44 a22 22 0 0 0 44 0 c 0-8 -8-20 -22-40 z" fill="url(#g)"/>
-  <path d="M32 18 C 24 30, 20 38, 20 44 a12 12 0 0 0 12 12" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+  <circle cx="30" cy="30" r="26" fill="#F5B800"/>
+  <rect x="22" y="22" width="34" height="34" fill="none" stroke="#0A2540" stroke-width="2"/>
+  <text x="30" y="38" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-style="italic" fill="#0A2540" font-weight="600">P</text>
 </svg>

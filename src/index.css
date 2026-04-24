@@ -5,12 +5,21 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
   body {
-    @apply bg-white text-jal-950 antialiased font-sans;
+    @apply bg-white text-brand-ink antialiased font-sans;
   }
-  h1, h2, h3 {
-    @apply font-display tracking-tight;
+  h1, h2, h3, h4 {
+    @apply font-display tracking-editorial;
+    font-feature-settings: "ss01", "kern";
+  }
+  h1 { @apply text-brand-sky; }
+  p  { @apply leading-relaxed; }
+  ::selection {
+    background: #F5B800;
+    color: #0A2540;
   }
 }
 
@@ -18,27 +27,97 @@
   .container-x {
     @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
   }
+  .container-tight {
+    @apply mx-auto max-w-5xl px-4 sm:px-6 lg:px-8;
+  }
   .btn-primary {
-    @apply inline-flex items-center gap-2 rounded-full bg-jal-700 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-jal-800 focus:outline-none focus:ring-2 focus:ring-jal-500 focus:ring-offset-2;
+    @apply inline-flex items-center gap-2 rounded-full bg-brand-sky px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-brand-skysoft hover:-translate-y-px focus:outline-none focus:ring-2 focus:ring-brand-gold focus:ring-offset-2;
+  }
+  .btn-gold {
+    @apply inline-flex items-center gap-2 rounded-full bg-brand-gold px-6 py-3 text-sm font-semibold text-brand-sky shadow-soft transition hover:bg-brand-goldsoft hover:-translate-y-px focus:outline-none focus:ring-2 focus:ring-brand-sky focus:ring-offset-2;
   }
   .btn-ghost {
-    @apply inline-flex items-center gap-2 rounded-full border border-jal-200 bg-white px-6 py-3 text-sm font-semibold text-jal-800 transition hover:border-jal-400 hover:bg-jal-50;
+    @apply inline-flex items-center gap-2 rounded-full border border-brand-sky/15 bg-white px-6 py-3 text-sm font-semibold text-brand-sky transition hover:border-brand-sky/40 hover:bg-brand-sky/5;
   }
   .eyebrow {
-    @apply inline-block rounded-full bg-jal-100 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-jal-700;
+    @apply inline-flex items-center gap-2 rounded-full bg-brand-gold/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-sky;
+  }
+  .eyebrow-dark {
+    @apply inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-white;
   }
   .card {
-    @apply rounded-2xl border border-jal-100 bg-white p-6 shadow-sm transition hover:shadow-md;
+    @apply rounded-2xl border border-brand-sky/10 bg-white p-6 shadow-soft transition hover:shadow-[0_24px_48px_-20px_rgba(10,37,64,0.18)];
+  }
+  .rule-gold {
+    @apply block h-0.5 w-14 bg-brand-gold;
+  }
+  .sanskrit {
+    @apply font-devanagari font-semibold;
   }
 }
 
+/* Rich gradients & backgrounds */
 .hero-gradient {
   background:
-    radial-gradient(1200px 600px at 20% -10%, rgba(54,178,246,0.25), transparent 60%),
-    radial-gradient(900px 500px at 110% 20%, rgba(2,97,159,0.18), transparent 60%),
-    linear-gradient(180deg, #f0f8ff 0%, #ffffff 80%);
+    radial-gradient(1200px 620px at 15% -10%, rgba(245,184,0,0.18), transparent 55%),
+    radial-gradient(900px 500px at 110% 30%, rgba(10,37,64,0.10), transparent 60%),
+    linear-gradient(180deg, #F6FAFC 0%, #FFFFFF 90%);
+}
+
+.hero-sky {
+  background:
+    radial-gradient(1200px 620px at 80% -10%, rgba(245,184,0,0.18), transparent 55%),
+    radial-gradient(900px 500px at 0% 110%, rgba(54,178,246,0.14), transparent 60%),
+    linear-gradient(180deg, #0A2540 0%, #12365E 100%);
 }
 
 .water-wave {
-  background: linear-gradient(180deg, rgba(12,152,231,0.08), rgba(12,152,231,0) 70%);
+  background: linear-gradient(180deg, rgba(12,152,231,0.06), rgba(12,152,231,0) 70%);
 }
+
+.dot-bg {
+  background-image: radial-gradient(rgba(10,37,64,0.08) 1px, transparent 1.5px);
+  background-size: 20px 20px;
+}
+
+/* Headline underline */
+.headline-deco::after {
+  content: '';
+  display: block;
+  width: 4rem;
+  height: 3px;
+  background: linear-gradient(90deg, #F5B800, #FBD24F);
+  margin-top: 1rem;
+  border-radius: 2px;
+}
+
+/* Stage connector line */
+.stage-rail {
+  background: linear-gradient(90deg, transparent 0%, rgba(10,37,64,0.12) 20%, rgba(10,37,64,0.12) 80%, transparent 100%);
+  height: 1px;
+}
+
+/* Marquee partners strip */
+.marquee-track {
+  display: flex;
+  gap: 3.5rem;
+  width: max-content;
+  animation: marquee 40s linear infinite;
+}
+
+/* Accent underline for links */
+.link-underline {
+  position: relative;
+}
+.link-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.3;
+  transition: opacity .2s;
+}
+.link-underline:hover::after { opacity: 1; }
