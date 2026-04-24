@@ -61,7 +61,7 @@ export default function Footer() {
           <address className="mt-4 not-italic text-sm text-jal-200">
             Param Innovations Pvt. Ltd.<br />
             Dhanbad, Jharkhand, India<br />
-            <a href="mailto:contact@paraminnovations.in" className="link-underline hover:text-white">contact@paraminnovations.in</a>
+            <a href="mailto:aps@paramai.in" className="link-underline hover:text-white">aps@paramai.in</a>
           </address>
         </div>
       </div>

@@ -11,7 +11,7 @@ export default function Contact() {
     const body = encodeURIComponent(
       `Name: ${data.get('name')}\nOrganisation: ${data.get('org')}\nEmail: ${data.get('email')}\nPhone: ${data.get('phone') || '-'}\nEnquiry type: ${data.get('type') || '-'}\n\n${data.get('message')}`
     );
-    window.location.href = `mailto:contact@paraminnovations.in?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:aps@paramai.in?subject=${subject}&body=${body}`;
     setStatus('sent');
   }
 
@@ -67,7 +67,7 @@ export default function Contact() {
           {/* Contact details */}
           <aside className="space-y-4">
             <Block title="Direct email">
-              <a href="mailto:contact@paraminnovations.in" className="text-brand-sky hover:text-brand-ink">contact@paraminnovations.in</a>
+              <a href="mailto:aps@paramai.in" className="text-brand-sky hover:text-brand-ink">aps@paramai.in</a>
               <div className="mt-2 text-sm text-brand-sky/60">Founder · <a href="mailto:aditdhn@gmail.com" className="link-underline">aditdhn@gmail.com</a></div>
             </Block>
             <Block title="Registered office">

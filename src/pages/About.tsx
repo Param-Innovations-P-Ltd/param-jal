@@ -119,7 +119,7 @@ export default function About() {
               <div className="mt-6 flex gap-4 text-sm text-jal-100">
                 <a href="mailto:aditdhn@gmail.com" className="link-underline">aditdhn@gmail.com</a>
                 <span className="opacity-40">·</span>
-                <a href="mailto:contact@paraminnovations.in" className="link-underline">contact@paraminnovations.in</a>
+                <a href="mailto:aps@paramai.in" className="link-underline">aps@paramai.in</a>
               </div>
             </div>
           </div>

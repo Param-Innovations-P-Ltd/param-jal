@@ -73,7 +73,7 @@ On Vercel dashboard:
 ## Before you push
 
 - Review copy in `src/pages/*.tsx` — numbers are sourced from the SPM NIWAS speaker notes; double-check anything that's customer-facing.
-- Replace `contact@paraminnovations.in` in `src/components/Footer.tsx` and `src/pages/Contact.tsx` if you use a different email.
+- Replace `aps@paramai.in` in `src/components/Footer.tsx` and `src/pages/Contact.tsx` if you use a different email.
 - Drop your logo as `public/logo.svg` and swap the inline `<Logo/>` component in `src/components/Navbar.tsx` if you want to use the real mark.
 
 ## Local dev reminder
