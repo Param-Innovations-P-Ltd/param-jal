@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white text-jal-950 antialiased font-sans;
+  }
+  h1, h2, h3 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-full bg-jal-700 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-jal-800 focus:outline-none focus:ring-2 focus:ring-jal-500 focus:ring-offset-2;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 rounded-full border border-jal-200 bg-white px-6 py-3 text-sm font-semibold text-jal-800 transition hover:border-jal-400 hover:bg-jal-50;
+  }
+  .eyebrow {
+    @apply inline-block rounded-full bg-jal-100 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-jal-700;
+  }
+  .card {
+    @apply rounded-2xl border border-jal-100 bg-white p-6 shadow-sm transition hover:shadow-md;
+  }
+}
+
+.hero-gradient {
+  background:
+    radial-gradient(1200px 600px at 20% -10%, rgba(54,178,246,0.25), transparent 60%),
+    radial-gradient(900px 500px at 110% 20%, rgba(2,97,159,0.18), transparent 60%),
+    linear-gradient(180deg, #f0f8ff 0%, #ffffff 80%);
+}
+
+.water-wave {
+  background: linear-gradient(180deg, rgba(12,152,231,0.08), rgba(12,152,231,0) 70%);
+}
