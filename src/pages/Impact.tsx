@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero';
+import SEO from '../components/SEO';
 
 const nablRows = [
   { param: 'pH',                  raw: '2.8',        treated: '7.2',     limit: '6.5 – 8.5',   pass: true },
@@ -25,6 +26,11 @@ const pipeline = [
 export default function Impact() {
   return (
     <>
+      <SEO
+        title="Impact & Validation"
+        description="Ward-7 Dhanbad Water ATM running 10,000 LPD for ~150 households at ₹0.50/L. DMC Technical Sanction for 5 kiosks, ₹45 Cr project. NABL-verified on all 30 BIS parameters."
+        path="/impact"
+      />
       <PageHero
         eyebrow="Impact & Validation"
         title="Not a prototype. Running today."

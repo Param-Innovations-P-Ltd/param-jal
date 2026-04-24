@@ -1,9 +1,14 @@
 import { Link } from 'react-router-dom';
 import PartnerMarquee from '../components/PartnerMarquee';
+import SEO from '../components/SEO';
 
 export default function Home() {
   return (
     <>
+      <SEO
+        description="Param Jal converts acidic coal mine pit water into BIS IS 10500:2012 drinking water. NABL-certified, patent-protected, running today at Ward-7 Dhanbad at ₹0.50 per litre."
+        path="/"
+      />
       {/* ─────────────────────── HERO ─────────────────────── */}
       <section className="hero-gradient relative overflow-hidden">
         <div className="dot-bg absolute inset-0 opacity-40 [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_70%)]" aria-hidden />

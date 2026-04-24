@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero';
+import SEO from '../components/SEO';
 
 const stages = [
   {
@@ -75,6 +76,11 @@ const comparison = [
 export default function Technology() {
   return (
     <>
+      <SEO
+        title="Technology"
+        description="The six-stage modular water treatment process behind Param Jal — coagulation, pH neutralisation, heavy-metal precipitation, chlorination, filtration, RO+UV. Five of six stages 100% indigenous."
+        path="/technology"
+      />
       <PageHero
         eyebrow="Technology"
         title="A six-stage modular treatment process."

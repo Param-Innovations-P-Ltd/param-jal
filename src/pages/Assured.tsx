@@ -1,4 +1,5 @@
 import PageHero from '../components/PageHero';
+import SEO from '../components/SEO';
 
 const indicators = [
   { letter: 'A', label: 'Affordability',   line: '₹0.50 per litre to the end consumer. Capital cost 60–70% below conventional Water Treatment Plants at equivalent capacity. Payback 18–24 months at 60% utilisation.' },
@@ -29,6 +30,11 @@ const econ = [
 export default function Assured() {
   return (
     <>
+      <SEO
+        title="ASSURED Framework"
+        description="How Param Jal performs on the SPM NIWAS evaluation framework — Affordability, Scalability, Sustainability, Universality, Rapidity, Excellence, Distinctiveness — with field evidence."
+        path="/assured"
+      />
       <PageHero
         eyebrow="Evaluation Framework"
         title="The ASSURED case for Param Jal."

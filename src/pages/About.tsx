@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero';
+import SEO from '../components/SEO';
 
 const certs = [
   { k: 'Registered Entity',  v: 'Param Innovations Pvt. Ltd.' },
@@ -36,6 +37,11 @@ const values = [
 export default function About() {
   return (
     <>
+      <SEO
+        title="About Param Innovations"
+        description="Param Innovations Pvt. Ltd. — a DPIIT-recognised deep-tech startup from Dhanbad building water solutions for India's coal belt. Founded by Aditya Prakash."
+        path="/about"
+      />
       <PageHero
         eyebrow="About"
         title="Param Innovations Pvt. Ltd."

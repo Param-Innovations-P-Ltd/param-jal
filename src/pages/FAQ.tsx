@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import PageHero from '../components/PageHero';
+import SEO from '../components/SEO';
 
 const sections: { group: string; items: { q: string; a: string }[] }[] = [
   {
@@ -43,6 +44,11 @@ const sections: { group: string; items: { q: string; a: string }[] }[] = [
 export default function FAQ() {
   return (
     <>
+      <SEO
+        title="FAQ"
+        description="Answers to the most common questions about Param Jal's six-stage treatment, operations, environmental management, unit economics, and strategic positioning."
+        path="/faq"
+      />
       <PageHero
         eyebrow="Frequently Asked Questions"
         title="The diligence questions, answered plainly."

@@ -1,4 +1,5 @@
 import PageHero from '../components/PageHero';
+import SEO from '../components/SEO';
 
 const levers = [
   { title: 'Indigenous pre-treatment chain', body: 'Five of six stages are one-hundred-percent Indian. No foreign IP, no import exposure. Chemicals and media sourceable within 100 km of Dhanbad.' },
@@ -19,6 +20,11 @@ const timeline = [
 export default function Atmanirbhar() {
   return (
     <>
+      <SEO
+        title="The Atmanirbhar Case"
+        description="Same imported membrane, three times the water. How Param Jal's indigenous six-stage pre-treatment cuts India's RO-membrane import exposure by ~60% per deployed unit."
+        path="/atmanirbhar"
+      />
       <PageHero
         eyebrow="The Strategic Case"
         title="Tied in chains from both sides."

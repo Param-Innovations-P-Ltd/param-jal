@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"  stop-color="#0A2540"/>
+      <stop offset="100%" stop-color="#12365E"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="50%" cy="50%" r="55%">
+      <stop offset="0%"   stop-color="#FBD24F"/>
+      <stop offset="100%" stop-color="#F5B800"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="rgba(245,184,0,0.25)"/>
+      <stop offset="100%" stop-color="rgba(245,184,0,0)"/>
+    </radialGradient>
+  </defs>
+
+  <!-- background -->
+  <rect width="1200" height="630" fill="url(#sky)"/>
+  <circle cx="260" cy="320" r="320" fill="url(#glow)"/>
+
+  <!-- brand sun -->
+  <g transform="translate(180, 200)">
+    <circle cx="160" cy="160" r="150" fill="url(#sun)"/>
+    <rect x="118" y="100" width="210" height="210" fill="none" stroke="#0A2540" stroke-width="3"/>
+    <text x="170" y="185" text-anchor="middle" font-family="'Great Vibes', 'Brush Script MT', cursive" font-size="108" fill="#0A2540">Param</text>
+    <rect x="114" y="232" width="174" height="44" fill="#0A2540"/>
+    <text x="201" y="263" text-anchor="middle" font-family="'Noto Serif Devanagari', serif" font-size="26" fill="#F5B800" font-weight="700">जगतं जयतु</text>
+  </g>
+
+  <!-- text block -->
+  <g transform="translate(580, 180)">
+    <text x="0" y="0" font-family="'Cormorant Garamond', Georgia, serif" font-size="90" font-weight="600" fill="#FFFFFF" letter-spacing="-2">Param Jal</text>
+    <rect x="0" y="22" width="60" height="3" fill="#F5B800"/>
+    <text x="0" y="80" font-family="'Cormorant Garamond', Georgia, serif" font-style="italic" font-size="44" fill="#FBD24F">From poisoned pit water</text>
+    <text x="0" y="130" font-family="'Cormorant Garamond', Georgia, serif" font-style="italic" font-size="44" fill="#FFFFFF">to pure jeevan-jal.</text>
+
+    <text x="0" y="210" font-family="Inter, sans-serif" font-size="22" fill="rgba(255,255,255,0.75)" letter-spacing="0.5">
+      Six-stage modular treatment · BIS IS 10500:2012 · NABL-certified
+    </text>
+    <text x="0" y="248" font-family="Inter, sans-serif" font-size="22" fill="rgba(255,255,255,0.75)" letter-spacing="0.5">
+      Running today at Ward-7 Dhanbad · ₹0.50 per litre
+    </text>
+
+    <g transform="translate(0, 330)">
+      <rect x="0" y="0" width="540" height="1" fill="rgba(255,255,255,0.2)"/>
+      <text x="0" y="30" font-family="Inter, sans-serif" font-size="16" letter-spacing="2" fill="#F5B800" font-weight="600">A PARAM INNOVATIONS INITIATIVE</text>
+      <text x="0" y="58" font-family="Inter, sans-serif" font-size="16" fill="rgba(255,255,255,0.6)">paramjal.in</text>
+    </g>
+  </g>
+</svg>
