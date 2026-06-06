@@ -16,7 +16,7 @@ export default function Contact() {
     setErrorMsg('');
 
     try {
-      const resp = await fetch('https://formsubmit.co/ajax/aps@paramai.in', {
+      const resp = await fetch('https://formsubmit.co/ajax/aps@paramjal.in', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -29,7 +29,7 @@ export default function Contact() {
           Phone: data.get('phone') || '-',
           'Enquiry type': data.get('type') || '-',
           Message: data.get('message'),
-          _cc: 'aditdhn@gmail.com',
+          _cc: 'aps@paramjal.in',
           _subject: `Param Jal enquiry — ${data.get('org') || 'Website'}`,
           _template: 'table',
           _captcha: 'false',
@@ -46,7 +46,7 @@ export default function Contact() {
       }
     } catch (err) {
       setStatus('error');
-      setErrorMsg('Network error. Please email us directly at aps@paramai.in.');
+      setErrorMsg('Network error. Please email us directly at aps@paramjal.in.');
     }
   }
 
@@ -72,7 +72,7 @@ export default function Contact() {
           <form onSubmit={onSubmit} className="rounded-2xl border border-brand-sky/10 bg-white p-8 shadow-soft md:p-10">
             <h2 className="font-display text-2xl font-semibold text-brand-sky">Send an enquiry</h2>
             <p className="mt-2 text-sm text-brand-sky/70">
-              Your message reaches <strong>aps@paramai.in</strong> and <strong>aditdhn@gmail.com</strong> directly. No mail client required.
+              Your message reaches <strong>aps@paramjal.in</strong> directly. No mail client required.
             </p>
 
             {status === 'sent' ? (
@@ -152,10 +152,7 @@ export default function Contact() {
           {/* Contact details */}
           <aside className="space-y-4">
             <Block title="Direct email">
-              <a href="mailto:aps@paramai.in" className="text-brand-sky hover:text-brand-ink">aps@paramai.in</a>
-              <div className="mt-2 text-sm text-brand-sky/60">
-                Founder · <a href="mailto:aditdhn@gmail.com" className="link-underline">aditdhn@gmail.com</a>
-              </div>
+              <a href="mailto:aps@paramjal.in" className="text-brand-sky hover:text-brand-ink">aps@paramjal.in</a>
             </Block>
             <Block title="Registered office">
               Param Innovations Pvt. Ltd.<br />
