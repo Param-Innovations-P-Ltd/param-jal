@@ -17,6 +17,7 @@ const compliance = [
   { k: 'SISFS Grant',           v: '₹9 Lakh from ACIC IIT(ISM) Dhanbad under Startup India Seed Fund Scheme.' },
   { k: 'DPIIT Recognition',     v: 'Param Innovations Pvt. Ltd. is DPIIT-recognised.' },
   { k: 'MSME Registration',     v: 'UDYAM-JH-04-0066916' },
+  { k: 'SPM NIWAS EOI',         v: 'Registered participant · EOI reference W-000301. Technology presentation scheduled June 2026.' },
   { k: 'Field Deployment',      v: 'Ward-7 Dhanbad Water ATM operational. DMC Technical Sanction received.' },
 ];
 
@@ -38,7 +39,7 @@ export default function Assured() {
       <PageHero
         eyebrow="Evaluation Framework"
         title="The ASSURED case for Param Jal."
-        subtitle="SPM NIWAS evaluates water technologies against seven indicators — Affordability, Scalability, Sustainability, Universality, Rapidity, Excellence, Distinctiveness. Here is where Param Jal lands on each, with the numbers to back it."
+        subtitle="Param Innovations (EOI W-000301) is a registered SPM NIWAS participant. The ASSURED framework evaluates water technologies across seven indicators — Affordability, Scalability, Sustainability, Universality, Rapidity, Excellence, Distinctiveness. Here is where Param Jal lands on each, with the numbers to back it."
         sanskrit="सर्वं निष्पादयेत् · Deliver on every dimension."
       />
 
