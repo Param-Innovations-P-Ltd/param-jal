@@ -3,19 +3,25 @@ import PageHero from '../components/PageHero';
 import SEO from '../components/SEO';
 
 const nablRows = [
-  { param: 'pH',                  raw: '2.8',        treated: '7.2',     limit: '6.5 – 8.5',   pass: true },
-  { param: 'Iron (Fe)',           raw: '48.2 mg/L',  treated: '0.28 mg/L', limit: '≤ 0.3 mg/L',  pass: true },
-  { param: 'Manganese (Mn)',      raw: '4.8 mg/L',   treated: '0.08 mg/L', limit: '≤ 0.1 mg/L',  pass: true },
-  { param: 'Arsenic (As)',        raw: '0.06 mg/L',  treated: '<0.01 mg/L', limit: '≤ 0.01 mg/L', pass: true },
-  { param: 'Total Coliform',      raw: '240 MPN',    treated: 'Nil',     limit: 'Nil required',pass: true },
-  { param: 'Turbidity',           raw: '42 NTU',     treated: '< 1 NTU', limit: '≤ 1 NTU',     pass: true },
-  { param: 'TDS',                 raw: '3,180 mg/L', treated: '312 mg/L',limit: '≤ 500 mg/L',  pass: true },
-  { param: 'Total Hardness',      raw: '1,240 mg/L', treated: '198 mg/L',limit: '≤ 600 mg/L',  pass: true },
+  { param: 'Taste',                raw: 'Agreeable',   treated: 'Agreeable', limit: 'Agreeable',      pass: true },
+  { param: 'Odour',                raw: 'Agreeable',   treated: 'Agreeable', limit: 'Agreeable',      pass: true },
+  { param: 'Colour (Hazen)',       raw: '<20 ⚠',       treated: '<5',        limit: '5–15',           pass: true },
+  { param: 'pH (25°C)',            raw: '7.9',         treated: '7.0',       limit: '6.5–8.5',        pass: true },
+  { param: 'TDS (mg/L)',           raw: '653',         treated: '47.0',      limit: '500–2000',       pass: true },
+  { param: 'Turbidity (NTU)',      raw: '3.6',         treated: '1.1',       limit: '1.0–5.0',        pass: true },
+  { param: 'Fluoride (mg/L)',      raw: '2.7 ⚠',       treated: '0.12',      limit: '1.0–1.5',        pass: true },
+  { param: 'Total Alkalinity (mg/L)', raw: '320',      treated: '24.0',      limit: '200–600',        pass: true },
+  { param: 'Total Hardness (mg/L)',raw: '626 ⚠',       treated: '42.0',      limit: '200–600',        pass: true },
+  { param: 'Calcium (mg/L)',       raw: '91.2',        treated: '0.8',       limit: '75–200',         pass: true },
+  { param: 'Magnesium (mg/L)',     raw: '95.52',       treated: '5.28',      limit: '30–100',         pass: true },
+  { param: 'Chloride (mg/L)',      raw: '67.02',       treated: '9.0',       limit: '250–1000',       pass: true },
+  { param: 'Total Coliforms (CFU/100mL)', raw: 'Present ⚠', treated: 'Absent', limit: 'Not detectable', pass: true },
+  { param: 'E. Coli (CFU/100mL)', raw: 'Absent',      treated: 'Absent',    limit: 'Not detectable', pass: true },
 ];
 
 const pipeline = [
-  { place: 'Dhanbad Ward-7',        status: 'Live',       volume: '10,000 LPD',  note: 'Water ATM operational · ~150 households daily' },
-  { place: 'DMC — 5 Kiosk Stations', status: 'Sanctioned', volume: '50,000 LPD',  note: 'Technical Sanction received · ~200 vending machines planned' },
+  { place: 'Angrapatra Mines, Sijua Ward-7 Dhanbad', status: 'Live', volume: '10,000 LPD', note: 'Water ATM operational · ~1,342 households/kiosk · Solar 3 KVA · Coin + UPI · 24×7' },
+  { place: 'DMC — 5 Kiosk Stations', status: 'Sanctioned', volume: '50,000 LPD', note: '₹19,86,900/kiosk · Chief Engineer Technical Sanction · 19 Aug 2025 · ~200 ATMs planned' },
   { place: 'Hazaribagh',             status: 'In Discussion', volume: 'TBD',       note: 'Municipal enquiry active' },
   { place: 'Godda',                  status: 'In Discussion', volume: 'TBD',       note: 'Municipal enquiry active' },
   { place: 'Ramgarh',                status: 'In Discussion', volume: 'TBD',       note: 'Municipal enquiry active' },
@@ -28,7 +34,7 @@ export default function Impact() {
     <>
       <SEO
         title="Impact & Validation"
-        description="Ward-7 Dhanbad Water ATM running 10,000 LPD for ~150 households at ₹0.50/L. DMC Technical Sanction for 5 kiosks, ₹45 Cr project. NABL-verified on all 30 BIS parameters."
+        description="Angrapatra Mines Ward-7 Dhanbad Water ATM running 10,000 LPD at ₹0.50/L. DMC Technical Sanction ₹19,86,900/kiosk, 5 locations. Government laboratory certified (DWSD Jharkhand) on all 14 IS 10500:2012 parameters."
         path="/impact"
       />
       <PageHero
@@ -77,9 +83,9 @@ export default function Impact() {
           />
           <Proof
             badge="Proof Point 03"
-            title="NABL-accredited lab validation"
-            body="Independent NABL-accredited testing confirms all 30 parameters of IS 10500:2012 are met — including pH, heavy metals (Fe, Mn, As, Pb), turbidity, TDS, total hardness, and bacteriological safety (coliform Nil)."
-            facts={['30 / 30 parameters passed', 'Feed drawn from actual mine water']}
+            title="Government laboratory certified"
+            body="Government of Jharkhand District Level Water Testing Laboratory (DWSD Dhanbad) confirmed all 14 IS 10500:2012 parameters compliant — including fluoride (95.5% reduction: 2.7 → 0.12 mg/L), TDS (93% reduction: 653 → 47 mg/L), hardness (93% reduction: 626 → 42 mg/L), and Total Coliforms: Present → Absent."
+            facts={['14 / 14 parameters passed', 'ULR TC1560325000000214F · 09 Jun 2026', 'Angrapatra Mines, Sijua Ward No. 7']}
           />
           <Proof
             badge="Proof Point 04"
@@ -95,14 +101,15 @@ export default function Impact() {
         <div className="container-x py-20">
           <div className="grid gap-10 md:grid-cols-[1fr_2fr] md:items-end">
             <div>
-              <span className="eyebrow">NABL Test Results</span>
+              <span className="eyebrow">Government Lab Test Results</span>
               <h2 className="headline-deco mt-4 font-display text-4xl font-semibold text-brand-sky md:text-5xl">
                 Before and after.
               </h2>
             </div>
             <p className="text-lg text-brand-sky/70">
-              Selected parameters from the full 30-parameter IS 10500:2012 report.
-              Every parameter passed, on actual coal mine pit water feed.
+              All 14 IS 10500:2012 parameters tested by the Government of Jharkhand —
+              District Level Water Testing Laboratory (DWSD), Dhanbad. Both samples taken
+              same day, same site: Angrapatra Mines, Sijua Ward No. 7.
             </p>
           </div>
 
@@ -135,7 +142,8 @@ export default function Impact() {
             </table>
           </div>
           <p className="mt-4 text-xs text-brand-sky/60">
-            Full 30-parameter report available on request. Testing by a NABL-accredited laboratory against BIS IS 10500:2012.
+            Tested by: Govt of Jharkhand — District Level Water Testing Laboratory (DWSD), Bhelatand Water Treatment Plant, Dhanbad-826004.
+            ULR No. TC1560325000000213F (pit water) · TC1560325000000214F (treated water). Date of Analysis: 06-06-2026 · Report: 09-06-2026.
           </p>
         </div>
       </section>

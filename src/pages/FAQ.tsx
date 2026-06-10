@@ -8,14 +8,16 @@ const sections: { group: string; items: { q: string; a: string }[] }[] = [
     items: [
       { q: 'What exactly does Param Jal treat?', a: 'Acidic coal mine pit water (pH 2–4) is our primary feed. The same six-stage process also handles high-TDS groundwater and surface water at municipal scale, validated across all three input chemistries.' },
       { q: 'How is the process different from a conventional RO + ETP?', a: 'Conventional plants are centralised and assume benign feed. Param Jal is decentralised, skid-mounted, and purpose-built for acid-feed water with a specific stage sequence (coagulation → neutralisation → precipitation → chlorination → filtration → RO+UV) that protects downstream elements and extends RO membrane life 2–3×.' },
-      { q: 'Is the output actually safe to drink?', a: 'Yes. A NABL-accredited laboratory verified all 30 parameters of BIS IS 10500:2012 are met on treated water drawn from actual coal mine pit water. The full report is available on request.' },
+      { q: 'Is the output actually safe to drink?', a: 'Yes. The Government of Jharkhand District Level Water Testing Laboratory (DWSD, Dhanbad, 09 Jun 2026, ULR TC1560325000000214F) confirmed all 14 IS 10500:2012 parameters are compliant on treated water from Angrapatra Mines, Ward-7. Pit water that tested high for fluoride (2.7 mg/L) and coliforms (Present) was reduced to 0.12 mg/L fluoride and zero coliforms in the treated output. Full report available on request.' },
       { q: 'Why RO at the end rather than upfront?', a: 'RO membranes perform well only on already-clean feed. Placing RO last — after coagulation, neutralisation, heavy-metal precipitation, chlorination and sand-carbon filtration — is what extends replacement cycles from 2–3 years to 5–7 years.' },
     ],
   },
   {
     group: 'Operations & Environment',
     items: [
-      { q: 'What happens to the heavy-metal sludge?', a: 'It is co-processed with mine overburden at the source mine under the mine\u2019s existing Environmental Clearance, per CPCB guidelines. It is never released to the open environment.' },
+      { q: 'What happens to the heavy-metal sludge?', a: 'Sludge is approximately 0.2\u20130.3 kg dry weight per kilolitre treated. It is collected, dewatered, and managed per CPCB solid waste guidelines \u2014 never released to the open environment.' },
+      { q: 'What happens to the reject water?', a: 'Reject water is approximately 20\u201330% of inlet volume. It is collected \u2014 not discharged. It is currently being evaluated for coal mine haul road dust suppression and municipal street sprinkling, giving even the waste stream a productive use.' },
+      { q: 'Who backs this technology academically?', a: 'Prof. Brijesh Kumar Mishra and his research team at the Department of Environmental Science and Engineering, IIT (ISM) Dhanbad. Prof. Mishra has led 16 funded research projects for the Ministry of Jal Shakti and the Ministry of Coal, with specialisation in mine water hydrology and heavy metal remediation \u2014 India\u2019s foremost academic authority on coal mine water management.' },
       { q: 'What is the energy profile?', a: 'Param Jal is gravity-assisted wherever possible. Pumping and RO are the dominant loads. Systems are solar-ready — the skid architecture supports a hybrid grid-plus-solar power package without redesign.' },
       { q: 'What is the operator skill required?', a: 'A single technician spending 1–2 hours per day for routine chemical top-up, filter backwash monitoring, and log-keeping. No full-time chemist is needed once the system is commissioned and dialled in.' },
       { q: 'What is the planned maintenance cycle?', a: 'Backwash every 24–72 hours depending on load. RO pre-filter replacement every 3–6 months. RO membrane replacement every 5–7 years with Param Jal pre-treatment, versus 2–3 years without.' },
@@ -24,6 +26,8 @@ const sections: { group: string; items: { q: string; a: string }[] }[] = [
   {
     group: 'Commercial & Compliance',
     items: [
+      { q: 'What is the cost per litre?', a: '₹0.50 per litre at the consumer price point (₹10 per 20 litres via Coin + UPI Water ATM, 24×7). This is comparable to the unregulated 20-litre jar market in mining towns — but with IS 10500:2012 verified output and municipal accountability.' },
+      { q: 'How does the business model work?', a: 'Public-private partnership. The municipality provides the site, civil infrastructure, and institutional oversight — and has sanctioned the capital cost (₹19,86,900 per kiosk). Param Innovations provides the technology, installation, and five years of operations. Revenue is generated at ₹10 per 20 litres. Break-even is 18–24 months. Secondary revenue from kiosk advertising. 90% of operating roles are reserved for women SHGs.' },
       { q: 'What is the capex and opex?', a: 'Capex is ₹8–12 Lakh per 1,000 LPD unit — all inclusive, skid-mounted. Opex is approximately ₹1.20 per 1,000 litres treated (chemicals + electricity + labour). The end consumer pays ₹0.50 per litre. Payback is 18–24 months at 60% utilisation.' },
       { q: 'Why is the patent only provisional, not complete?', a: 'Provisional 202531084570 was filed in September 2025 to secure priority date. Complete specification — with expanded claims — is due September 2026. This is standard patent strategy in India.' },
       { q: 'What government funding has Param Innovations received?', a: '₹9 Lakh SISFS grant from ACIC IIT(ISM) Dhanbad under the Startup India Seed Fund Scheme. Beyond that, the company is self-funded.' },

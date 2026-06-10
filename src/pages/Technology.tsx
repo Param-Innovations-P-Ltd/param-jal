@@ -5,51 +5,59 @@ import SEO from '../components/SEO';
 const stages = [
   {
     n: '01',
-    title: 'Coagulation & Flocculation',
-    desc: 'Polyaluminium chloride (PAC) and anionic polyacrylamide (PAM) are dosed into the raw feed. They neutralise the surface charge of suspended particles, causing solids and heavy-metal colloids to clump into dense flocs that settle out of the water column.',
-    role: 'Removes ≥95% suspended solids before downstream stages',
-    chemistry: 'PAC: 30–80 mg/L · PAM: 0.5–2 mg/L',
+    title: 'Aeration',
+    desc: 'Raw mine water is exposed to air in a cascade aerator. Dissolved ferrous iron (Fe²⁺) is oxidised to ferric iron (Fe³⁺), which precipitates as ferric hydroxide — a solid that can be filtered out. pH begins to rise. Dissolved gases are also volatilised at this stage.',
+    role: 'Oxidises Fe²⁺ → Fe³⁺; raises pH; removes dissolved gases',
+    chemistry: 'Atmospheric oxygen — cascade aerator',
     indigenous: true,
   },
   {
     n: '02',
-    title: 'pH Neutralisation',
-    desc: 'Controlled lime (Ca(OH)₂) dosing raises the raw feed from pH 2–4 to a neutral pH of 7. The water is no longer corrosive and heavy metal hydroxides begin to precipitate out of solution.',
-    role: 'Neutralises acidity; initiates precipitation chemistry',
-    chemistry: 'Lime: 0.5–1.5 kg per m³ feed',
+    title: 'Coagulation',
+    desc: 'Alum (aluminium sulphate) is dosed at controlled pH. Aluminium ions neutralise the negative surface charge on suspended particles and colloids, causing them to clump together. Without this step, fine particles remain suspended and pass through later filters.',
+    role: 'Destabilises suspended particles; prepares floc formation',
+    chemistry: 'Alum (Al₂(SO₄)₃) — controlled pH dosing',
     indigenous: true,
   },
   {
     n: '03',
-    title: 'Heavy Metal Precipitation',
-    desc: 'At neutral pH, iron, manganese, arsenic and lead precipitate as insoluble hydroxide flocs. These are removed with the settled sludge and co-processed with mine overburden under the source mine\u2019s environmental clearance.',
-    role: 'Removes regulated heavy metals below BIS limits',
-    chemistry: 'Fe³⁺ → Fe(OH)₃ ↓ · Mn²⁺ → MnO₂ ↓',
+    title: 'Flocculation',
+    desc: 'Slow mechanical mixing (50–300 RPM) allows the destabilised particles to collide and grow into larger, visible flocs. These flocs carry adsorbed heavy metal ions — lead, arsenic, zinc, copper — with them as they settle.',
+    role: 'Grows micro-aggregates into settleable flocs carrying heavy metals',
+    chemistry: 'Slow mix: 50–300 RPM · floc carries Pb, As, Zn, Cu',
     indigenous: true,
   },
   {
     n: '04',
-    title: 'Disinfection by Chlorination',
-    desc: 'Sodium hypochlorite (NaOCl) is dosed to inactivate pathogens and oxidise residual organic matter. Applied before filtration so the subsequent sand-carbon bed polishes out the chlorine.',
-    role: 'Kills bacteria and viruses; oxidises organics',
-    chemistry: 'NaOCl: 2–5 mg/L free residual',
+    title: 'Sequential Filtration',
+    desc: 'Patented pre-treatment: water passes through activated carbon, multi-media, and ion exchange resin beds in sequence. Activated carbon removes organics and residual chlorine. Multi-media removes particulates. Resin captures metal-organic complexes. This stage protects the RO membrane from fouling — extending its life 2–3×. Subject of Patent Application 202531084570.',
+    role: 'Patented core — removes organics, particulates, metal-organic complexes',
+    chemistry: 'Activated carbon → multi-media → ion exchange resin',
     indigenous: true,
   },
   {
     n: '05',
-    title: 'Sand & Carbon Filtration',
-    desc: 'A dual-media filter bed (graded sand + activated carbon) removes residual turbidity, free chlorine, dissolved organics, colour and odour. Output is visually clear and organoleptically clean — and ready for the RO stage.',
-    role: 'Turbidity <1 NTU · removes residual chlorine',
-    chemistry: 'Backwash cycle: 24–72 hrs depending on load',
-    indigenous: true,
+    title: 'Reverse Osmosis',
+    desc: 'Treated water is forced under pressure through a semi-permeable RO membrane with pore size 0.0001 microns. Heavy metal ions are physically larger than this pore size and cannot pass — size exclusion is unconditional and input-independent. Ward-7 test: TDS reduced from 653 mg/L to 47 mg/L.',
+    role: 'Physical size exclusion — 95–99% ion rejection',
+    chemistry: 'Pore size 0.0001 µm · ion rejection 95–99%',
+    indigenous: false,
   },
   {
     n: '06',
-    title: 'RO + UV Final Polishing',
-    desc: 'Reverse osmosis removes dissolved salts down to <500 mg/L TDS. UV disinfection at 254 nm ensures zero E. coli and total coliform. Output meets BIS IS 10500:2012 across all 30 parameters.',
-    role: 'Final polishing — meets BIS drinking-water standard',
-    chemistry: 'RO rejection >95% · UV: 40 mJ/cm² dose',
+    title: 'UV Disinfection',
+    desc: 'UV light at 254 nm wavelength disrupts the DNA of any remaining microorganisms, preventing reproduction. This stage addresses bacteriological safety. Ward-7 test result: Total Coliforms — Absent. E. Coli — Absent.',
+    role: 'Biological safety — pathogen inactivation',
+    chemistry: 'UV 254 nm · 40 mJ/cm² dose',
     indigenous: false,
+  },
+  {
+    n: '07',
+    title: 'Sludge Management',
+    desc: 'Approximately 0.2–0.3 kg dry weight of sludge per kilolitre treated. Sludge is collected, dewatered, and managed per CPCB solid waste guidelines. Reject water (∼20–30% of inlet volume) is collected — not discharged — and evaluated for coal mine haul road dust suppression and municipal street sprinkling.',
+    role: 'Contained, compliant waste handling — zero discharge',
+    chemistry: 'Sludge: 0.2–0.3 kg/kL · reject water collected, not discharged',
+    indigenous: true,
   },
 ];
 
@@ -78,13 +86,13 @@ export default function Technology() {
     <>
       <SEO
         title="Technology"
-        description="The six-stage modular water treatment process behind Param Jal — coagulation, pH neutralisation, heavy-metal precipitation, chlorination, filtration, RO+UV. Five of six stages 100% indigenous."
+        description="The seven-stage modular water treatment process behind PARAM JAL — aeration, coagulation, flocculation, patented sequential filtration, RO, UV disinfection, sludge management. Five of seven stages 100% indigenous."
         path="/technology"
       />
       <PageHero
         eyebrow="Technology"
-        title="A six-stage modular treatment process."
-        subtitle="Each stage has a specific role. Their sequence is the invention. Five of the six stages use materials we can source within 100 km of Dhanbad — only the final RO membrane is imported, and our pre-treatment extends its life by two to three times."
+        title="Seven stages. Each with a precise engineering role."
+        subtitle="Each stage has a specific role. Their sequence is the invention. The patented synergy between stages 2–4 (coagulation, flocculation, sequential filtration) is what distinguishes PARAM JAL from a standard RO plant — and extends RO membrane life 2–3×."
         sanskrit="जलं जीवनम् अमृतम् च · Water is life, and nectar."
       />
 
@@ -248,8 +256,8 @@ export default function Technology() {
         <div className="grid gap-6 md:grid-cols-3">
           <Link to="/impact" className="card group">
             <div className="text-xs uppercase tracking-[0.18em] text-brand-gold">Field Evidence</div>
-            <h3 className="mt-3 font-display text-2xl text-brand-sky">See the NABL report →</h3>
-            <p className="mt-2 text-sm text-brand-sky/70">Before and after readings on actual mine water, verified by a NABL-accredited lab.</p>
+            <h3 className="mt-3 font-display text-2xl text-brand-sky">See the lab report →</h3>
+            <p className="mt-2 text-sm text-brand-sky/70">Before and after readings on actual mine water — Government of Jharkhand DWSD lab, 09 Jun 2026.</p>
           </Link>
           <Link to="/assured" className="card group">
             <div className="text-xs uppercase tracking-[0.18em] text-brand-gold">Evaluation</div>

@@ -4,12 +4,14 @@ import SEO from '../components/SEO';
 
 const certs = [
   { k: 'Registered Entity',  v: 'Param Innovations Pvt. Ltd.' },
-  { k: 'Recognition',        v: 'DPIIT-recognised Startup' },
+  { k: 'CIN',                v: 'U36000JH2025PTC025036' },
+  { k: 'Recognition',        v: 'DPIIT-recognised Startup · DPIIT207495' },
   { k: 'MSME UDYAM',         v: 'UDYAM-JH-04-0066916' },
-  { k: 'Provisional Patent', v: '202531084570' },
+  { k: 'FSSAI Registration', v: '21125172000318' },
+  { k: 'Provisional Patent', v: '202531084570 · Filed 5 Sep 2025' },
   { k: 'Patent Agent',       v: 'P.S. Davar & Co. · Dr. Indira Banerjee (IN/PA-211)' },
   { k: 'Founder',            v: 'Aditya Prakash' },
-  { k: 'Headquarters',       v: 'Dhanbad, Jharkhand, India' },
+  { k: 'Headquarters',       v: 'Madnadih, Bansjora, Dhanbad, Jharkhand — 826001' },
 ];
 
 const milestones = [
@@ -126,6 +128,35 @@ export default function About() {
                 <a href="mailto:aps@paramjal.in" className="link-underline">aps@paramjal.in</a>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team */}
+      <section className="container-x py-20">
+        <span className="eyebrow">The Team</span>
+        <h2 className="headline-deco mt-4 font-display text-4xl font-semibold text-brand-sky md:text-5xl">
+          Built by specialists.
+        </h2>
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          <div className="rounded-2xl border border-brand-sky/10 bg-white p-7 shadow-soft">
+            <div className="flex size-12 items-center justify-center rounded-xl bg-brand-sky font-display text-xl font-semibold text-brand-gold">AP</div>
+            <h3 className="mt-4 font-display text-xl font-semibold text-brand-sky">Aditya Prakash</h3>
+            <div className="mt-1 text-xs uppercase tracking-[0.14em] text-brand-gold">Founder &amp; Director</div>
+            <p className="mt-3 text-sm text-brand-sky/75">14 years of business operations and government liaison experience. Founder of Param Innovations (DPIIT recognised startup, CIN U36000JH2025PTC025036). Also runs Kansdee Ventures (GIS/digitisation) and Puru Wings Private Limited. Deep Dhanbad coal belt operational experience.</p>
+            <a href="mailto:aditdhn@gmail.com" className="mt-3 block text-xs text-brand-sky/60 link-underline">aditdhn@gmail.com · +91 72093 77707</a>
+          </div>
+          <div className="rounded-2xl border border-brand-sky/10 bg-white p-7 shadow-soft">
+            <div className="flex size-12 items-center justify-center rounded-xl bg-brand-sky font-display text-xl font-semibold text-brand-gold">AS</div>
+            <h3 className="mt-4 font-display text-xl font-semibold text-brand-sky">Aditi Suman Srivastava</h3>
+            <div className="mt-1 text-xs uppercase tracking-[0.14em] text-brand-gold">Co-Founder &amp; Co-Director</div>
+            <p className="mt-3 text-sm text-brand-sky/75">NITI Aayog Community Innovator Fellow. Brings deep community engagement expertise and grassroots implementation experience to PARAM JAL&apos;s last-mile deployment model.</p>
+          </div>
+          <div className="rounded-2xl border border-brand-sky/10 bg-white p-7 shadow-soft">
+            <div className="flex size-12 items-center justify-center rounded-xl bg-brand-sky font-display text-xl font-semibold text-brand-gold">BM</div>
+            <h3 className="mt-4 font-display text-xl font-semibold text-brand-sky">Prof. Brijesh Kumar Mishra</h3>
+            <div className="mt-1 text-xs uppercase tracking-[0.14em] text-brand-gold">Technical Advisor</div>
+            <p className="mt-3 text-sm text-brand-sky/75">Dept. of Environmental Science &amp; Engineering, IIT (ISM) Dhanbad. 16 funded research projects for the Ministry of Jal Shakti and the Ministry of Coal. Specialisation: mine water hydrology, heavy metal remediation, and water treatment systems.</p>
           </div>
         </div>
       </section>

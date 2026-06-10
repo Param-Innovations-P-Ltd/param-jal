@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <SEO
-        description="Param Jal converts acidic coal mine pit water into BIS IS 10500:2012 drinking water. NABL-certified, patent-protected, running today at Ward-7 Dhanbad at ₹0.50 per litre."
+        description="PARAM JAL converts high-TDS coal mine pit water into BIS IS 10500:2012 drinking water. Government laboratory certified (DWSD Jharkhand), patent-protected, field-proven at Ward-7 Dhanbad."
         path="/"
       />
       {/* ─────────────────────── HERO ─────────────────────── */}
@@ -25,9 +25,9 @@ export default function Home() {
               From <span className="italic text-brand-gold">poisoned</span> pit water<br /> to pure <span className="italic">jeevan-jal.</span>
             </h1>
             <p className="mt-8 max-w-xl text-lg leading-relaxed text-brand-sky/75 md:text-xl">
-              Param Jal is a six-stage, modular water treatment technology that converts
-              acidic coal mine pit water (pH 2–4) into BIS IS 10500:2012 drinking water —
-              NABL-certified, patent-protected, and running today at Ward-7 in Dhanbad.
+              PARAM JAL converts high-TDS coal mine pit water into certified potable water —
+              IS 10500:2012 compliant, government laboratory certified (DWSD Jharkhand),
+              patent-protected, and running today at Angrapatra Mines, Ward-7, Dhanbad.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-3">
               <Link to="/technology" className="btn-primary">Explore the Technology →</Link>
@@ -46,6 +46,21 @@ export default function Home() {
 
       {/* ─────────────────────── PARTNER STRIP ─────────────────────── */}
       <PartnerMarquee />
+
+      {/* ─────────────────────── CREDENTIALS STRIP ─────────────────────── */}
+      <section className="bg-white border-b border-brand-sky/10">
+        <div className="container-x py-10">
+          <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-6">
+            {credentials.map((c) => (
+              <div key={c.label} className="rounded-xl border border-brand-sky/10 bg-jal-50/60 p-4 text-center">
+                <div className="text-xs font-semibold uppercase tracking-[0.14em] text-brand-gold">{c.label}</div>
+                <div className="mt-1 font-display text-sm font-semibold text-brand-sky leading-tight">{c.value}</div>
+                <div className="mt-1 text-[10px] text-brand-sky/60">{c.note}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* ─────────────────────── BY THE NUMBERS ─────────────────────── */}
       <section className="bg-white">
@@ -120,11 +135,11 @@ export default function Home() {
           <div className="mx-auto max-w-3xl text-center">
             <span className="eyebrow">The Technology</span>
             <h2 className="headline-deco mx-auto mt-4 text-4xl font-semibold text-brand-sky md:text-5xl">
-              A six-stage modular system.
+              Seven stages. Each with a precise engineering role.
             </h2>
             <p className="mt-5 text-lg text-brand-sky/70">
-              Five of the six stages are one-hundred-percent indigenous. Only the final RO
-              membrane is imported — and our pre-treatment extends its life two to three times.
+              Five of the seven stages are one-hundred-percent indigenous. Only the RO
+              membrane is imported — and our patented pre-treatment extends its life two to three times.
             </p>
           </div>
 
@@ -331,11 +346,20 @@ export default function Home() {
 
 /* ───────── Data ───────── */
 
+const credentials = [
+  { label: 'Patent Pending',    value: 'App. No. 202531084570', note: 'Filed 5 Sep 2025 · Kolkata Patent Office' },
+  { label: 'SISFS Grant',       value: '₹9 Lakhs',             note: 'ACIC IIT(ISM) Dhanbad' },
+  { label: 'Govt Sanction',     value: '₹19,86,900 / kiosk',   note: 'DMC Technical Sanction · Chief Engineer · 19 Aug 2025' },
+  { label: 'DPIIT Recognised',  value: 'Startup India',         note: 'Param Innovations Pvt. Ltd.' },
+  { label: 'EOI Shortlisted',   value: 'W-000301',              note: 'SPM NIWAS Expert Committee · DDWS · 12 Jun 2026' },
+  { label: 'FSSAI Registered',  value: '21125172000318',        note: 'Food Safety Registration' },
+];
+
 const numbers = [
-  { k: '30 / 30',     label: 'BIS parameters passed', note: 'All parameters of IS 10500:2012 cleared on NABL lab report.' },
-  { k: '₹0.50 /L',    label: 'End-consumer price',    note: 'Under one-third the cost of packaged drinking water.' },
-  { k: '10,000 LPD',  label: 'Pilot capacity',        note: 'Operational Water ATM at Ward-7, Dhanbad.' },
-  { k: '600+',        label: 'Mine sites addressable', note: 'Pan-India pipeline across the coal belt.' },
+  { k: '10,000 LPD', label: 'Live Production',              note: 'Operational Water ATM at Angrapatra Mines, Ward-7 Dhanbad.' },
+  { k: '14 / 14',    label: 'IS 10500:2012 Parameters',     note: 'All tested parameters compliant — Government laboratory certified (DWSD Jharkhand, 09 Jun 2026).' },
+  { k: '₹0.50 /L',   label: 'Consumer Price',               note: 'Coin + UPI Water ATM — 24×7. Under one-third the cost of packaged drinking water.' },
+  { k: 'TRL 8/9',    label: 'System Qualified',             note: 'Field-deployed and government-validated. DMC Technical Sanction: ₹19,86,900 per kiosk.' },
 ];
 
 const problemFacts = [
@@ -346,17 +370,18 @@ const problemFacts = [
 ];
 
 const stages = [
-  { n: '01', title: 'Coagulation & Flocculation',    desc: 'PAC + anionic PAM clump suspended solids and metals.', indigenous: true },
-  { n: '02', title: 'pH Neutralisation',             desc: 'Lime dosing raises pH 2–4 to a neutral 7.',             indigenous: true },
-  { n: '03', title: 'Heavy Metal Precipitation',     desc: 'Fe, Mn, As, Pb chemically removed as hydroxides.',       indigenous: true },
-  { n: '04', title: 'Disinfection by Chlorination',  desc: 'NaOCl kills pathogens, breaks down organics.',           indigenous: true },
-  { n: '05', title: 'Sand & Carbon Filtration',      desc: 'Dual-media bed removes turbidity and residual Cl.',      indigenous: true },
-  { n: '06', title: 'RO + UV Final Polishing',       desc: 'RO removes TDS, UV ensures zero E. coli.',               indigenous: false },
+  { n: '01', title: 'Aeration',                      desc: 'Cascade aerator oxidises dissolved Fe²⁺ and Mn²⁺; pH rises; dissolved gases volatilise.', indigenous: true },
+  { n: '02', title: 'Coagulation',                   desc: 'Alum dosing neutralises surface charge on suspended particles and colloids.',              indigenous: true },
+  { n: '03', title: 'Flocculation',                  desc: 'Slow mixing (50–300 RPM) grows micro-aggregates into settleable flocs carrying heavy metals.', indigenous: true },
+  { n: '04', title: 'Sequential Filtration',         desc: 'Patented: activated carbon → multi-media → ion exchange resin. Protects RO membrane, extends life 2–3×.', indigenous: true },
+  { n: '05', title: 'Reverse Osmosis',               desc: 'Physical size exclusion at 0.0001 µm — 95–99% ion rejection. TDS 653 → 47 mg/L at Ward-7.', indigenous: false },
+  { n: '06', title: 'UV Disinfection',               desc: 'UV at 254 nm disrupts pathogen DNA. Ward-7 result: Total Coliforms — Absent, E. Coli — Absent.', indigenous: false },
+  { n: '07', title: 'Sludge Management',             desc: 'Reject water collected (not discharged); sludge managed per CPCB guidelines.', indigenous: true },
 ];
 
 const pillars = [
-  { title: 'NABL-certified output',     desc: 'All 30 parameters of IS 10500:2012 passed on actual mine-water feed.',                       icon: <IconCheck />,  link: '/impact',     linkLabel: 'See lab report' },
-  { title: 'Patent-protected process',  desc: 'Provisional Patent 202531084570 covers the integrated six-stage sequence.',                 icon: <IconShield />, link: '/about',      linkLabel: 'Compliance' },
+  { title: 'Government laboratory certified', desc: 'All 14 IS 10500:2012 parameters passed — Government of Jharkhand DWSD lab, 09 Jun 2026 (ULR TC1560325000000214F).', icon: <IconCheck />,  link: '/impact',     linkLabel: 'See lab report' },
+  { title: 'Patent-protected process',  desc: 'Provisional Patent 202531084570 covers the integrated seven-stage sequence.',                icon: <IconShield />, link: '/about',      linkLabel: 'Compliance' },
   { title: '60–70% lower capex',        desc: 'Versus conventional Water Treatment Plants at equivalent capacity.',                         icon: <IconCoin />,   link: '/assured',    linkLabel: 'Unit economics' },
   { title: 'Modular by design',         desc: 'Skids from 50,000 to 5,00,000 LPD. Deployable in 15–20 days.',                               icon: <IconModule />, link: '/technology', linkLabel: 'Design notes' },
   { title: 'Atmanirbhar pre-treatment', desc: 'Five of six stages are 100% Indian-sourceable; extends RO membrane life 2–3×.',              icon: <IconFlag />,   link: '/atmanirbhar', linkLabel: 'The strategy' },
@@ -364,7 +389,7 @@ const pillars = [
 ];
 
 const previewFaqs = [
-  { q: 'Is the output actually safe to drink?',            a: 'Yes — a NABL-accredited laboratory verified all 30 parameters of BIS IS 10500:2012 are met on treated water drawn from actual coal mine pit water. Full report available on request.' },
+  { q: 'Is the output actually safe to drink?',            a: 'Yes — the Government of Jharkhand District Level Water Testing Laboratory (DWSD Dhanbad, 09 Jun 2026) confirmed all 14 IS 10500:2012 parameters are compliant on treated water from Angrapatra Mines, Ward-7. Full report available on request.' },
   { q: 'What happens to the heavy-metal sludge?',          a: 'It is co-processed with mine overburden at the source mine under the mine\u2019s existing Environmental Clearance, per CPCB guidelines. It is never released to the open environment.' },
   { q: 'How is this different from a conventional ETP?',   a: 'ETPs are large, centralised, and use imported elements at industrial scale. Param Jal is decentralised, skid-mounted, and designed for last-mile ATM delivery at ₹0.50/L. Different segment, different cost structure.' },
   { q: 'Why is the process patent-protected?',             a: 'The integrated sequence of six stages — and their specific ordering — is novel. We filed Provisional 202531084570 in September 2025 to establish priority; complete specification is due September 2026.' },
@@ -378,18 +403,18 @@ function HeroPanel() {
       <div className="absolute -inset-6 -z-0 rounded-[3rem] bg-gradient-to-br from-brand-gold/20 via-white to-brand-sky/10 blur-2xl" />
       <div className="relative rounded-[2rem] border border-brand-sky/10 bg-white p-6 shadow-[0_40px_80px_-40px_rgba(10,37,64,0.25)]">
         <div className="flex items-center justify-between text-[11px] uppercase tracking-[0.18em]">
-          <span className="text-brand-sky/60">NABL lab report</span>
+          <span className="text-brand-sky/60">Govt lab report · DWSD Jharkhand · 09 Jun 2026</span>
           <span className="flex items-center gap-1.5 rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-[10px] text-emerald-700">
-            <span className="size-1.5 rounded-full bg-emerald-500 animate-pulse" /> Pass · 30/30
+            <span className="size-1.5 rounded-full bg-emerald-500 animate-pulse" /> Pass · 14/14
           </span>
         </div>
         <div className="mt-5 space-y-3">
           {[
-            { label: 'pH',         v: '2.8',  after: '7.2',   unit: '' },
-            { label: 'Iron',       v: '48.2', after: '0.28',  unit: 'mg/L' },
-            { label: 'Coliform',   v: '240',  after: 'Nil',   unit: 'MPN' },
-            { label: 'Turbidity',  v: '42',   after: '<1',    unit: 'NTU' },
-            { label: 'TDS',        v: '3,180',after: '312',   unit: 'mg/L' },
+            { label: 'TDS',       v: '653',  after: '47.0',  unit: 'mg/L' },
+            { label: 'Fluoride',  v: '2.7',  after: '0.12',  unit: 'mg/L' },
+            { label: 'Hardness',  v: '626',  after: '42.0',  unit: 'mg/L' },
+            { label: 'Coliform',  v: 'Present', after: 'Absent', unit: '' },
+            { label: 'pH',        v: '7.9',  after: '7.0',   unit: '' },
           ].map((r) => (
             <div key={r.label} className="flex items-center justify-between rounded-xl border border-brand-sky/10 bg-gradient-to-r from-jal-50/70 to-white px-4 py-3">
               <span className="text-sm font-medium text-brand-sky">{r.label}</span>
@@ -402,7 +427,7 @@ function HeroPanel() {
           ))}
         </div>
         <div className="mt-5 flex items-center justify-between border-t border-brand-sky/10 pt-4">
-          <span className="text-xs text-brand-sky/60">Feed · actual coal mine pit water</span>
+          <span className="text-xs text-brand-sky/60">Angrapatra Mines, Ward-7 Dhanbad</span>
           <span className="font-mono text-xs text-brand-sky/60">IS 10500:2012</span>
         </div>
       </div>

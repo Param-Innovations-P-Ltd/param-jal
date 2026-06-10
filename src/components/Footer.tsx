@@ -49,10 +49,13 @@ export default function Footer() {
         <div>
           <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-gold">Recognitions</h4>
           <ul className="mt-4 space-y-2.5 text-sm text-jal-200">
-            <li>DPIIT-recognised Startup</li>
+            <li>DPIIT-recognised Startup · DPIIT207495</li>
+            <li>CIN: U36000JH2025PTC025036</li>
             <li>MSME UDYAM-JH-04-0066916</li>
+            <li>FSSAI Registration 21125172000318</li>
             <li>SISFS Grantee · ACIC IIT(ISM)</li>
             <li>Provisional Patent 202531084570</li>
+            <li>EOI W-000301 · SPM NIWAS · DDWS</li>
           </ul>
         </div>
 
@@ -60,17 +63,28 @@ export default function Footer() {
           <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-gold">Registered Office</h4>
           <address className="mt-4 not-italic text-sm text-jal-200">
             Param Innovations Pvt. Ltd.<br />
-            Dhanbad, Jharkhand, India<br />
+            Madnadih, Bansjora<br />
+            Dhanbad, Jharkhand — 826001<br />
+            <a href="tel:+917209377707" className="link-underline hover:text-white">+91 72093 77707</a><br />
             <a href="mailto:aps@paramjal.in" className="link-underline hover:text-white">aps@paramjal.in</a>
           </address>
+        </div>
+      </div>
+
+      {/* Closing quote */}
+      <div className="border-t border-white/5">
+        <div className="container-x py-6 text-center text-sm italic text-jal-300">
+          &ldquo;Advancement that doesn&apos;t reach the last person is incompleteness — not achievement.&rdquo;
         </div>
       </div>
 
       {/* Bottom strip */}
       <div className="border-t border-white/5">
         <div className="container-x flex flex-col items-center justify-between gap-3 py-6 text-xs text-jal-300 md:flex-row">
-          <span>© {new Date().getFullYear()} Param Innovations Pvt. Ltd. · All rights reserved.</span>
+          <span>© {new Date().getFullYear()} Param Innovations Pvt. Ltd. · PARAM JAL is a registered technology under Patent Application 202531084570 · DPIIT Recognised Startup</span>
           <span className="flex items-center gap-3">
+            <span>FSSAI 21125172000318</span>
+            <span className="h-3 w-px bg-white/20" />
             <span>EOI W-000301</span>
             <span className="h-3 w-px bg-white/20" />
             <span>Made in Dhanbad · For India</span>

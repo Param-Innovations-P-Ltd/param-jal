@@ -9,7 +9,7 @@ type Props = {
 
 const SITE        = 'https://paramjal.in';
 const DEFAULT_TIT = 'Param Jal · Water Technology by Param Innovations';
-const DEFAULT_DES = 'Param Jal converts acidic coal mine pit water (pH 2–4) into BIS IS 10500:2012 drinking water. NABL-certified, patent-protected, field-proven in Dhanbad.';
+const DEFAULT_DES = 'PARAM JAL converts high-TDS coal mine pit water into BIS IS 10500:2012 drinking water. Government laboratory certified (DWSD Jharkhand), patent-protected, field-proven at Ward-7 Dhanbad.';
 const DEFAULT_IMG = '/og-image.svg';
 
 export default function SEO({ title, description, path = '/', image }: Props) {
