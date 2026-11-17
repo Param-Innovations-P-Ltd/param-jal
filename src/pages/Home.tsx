@@ -9,6 +9,21 @@ export default function Home() {
         description="PARAM JAL converts high-TDS coal mine pit water into BIS IS 10500:2012 drinking water. Government laboratory certified (DWSD Jharkhand), patent-protected, field-proven at Ward-7 Dhanbad."
         path="/"
       />
+      {/* ─────────────────────── CSR CONCLAVE BANNER ─────────────────────── */}
+      <div className="border-b border-brand-gold/30 bg-brand-sky text-white">
+        <div className="container-x flex flex-wrap items-center justify-center gap-x-4 gap-y-1 py-2.5 text-center text-sm">
+          <span className="rounded-full bg-brand-gold px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-brand-sky">
+            Showcased
+          </span>
+          <span>
+            Param Jal is a featured CSR project at the IIT (ISM) Dhanbad CSR Conclave, 5 Dec 2026. Sponsorship packages ₹5–25 lakh.
+          </span>
+          <Link to="/csr-conclave" className="font-semibold text-brand-gold underline underline-offset-4">
+            Support safe drinking water →
+          </Link>
+        </div>
+      </div>
+
       {/* ─────────────────────── HERO ─────────────────────── */}
       <section className="hero-gradient relative overflow-hidden">
         <div className="dot-bg absolute inset-0 opacity-40 [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_70%)]" aria-hidden />

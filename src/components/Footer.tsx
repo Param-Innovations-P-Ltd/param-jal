@@ -40,6 +40,7 @@ export default function Footer() {
           <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-gold">Company</h4>
           <ul className="mt-4 space-y-2.5 text-sm">
             <li><Link to="/about" className="link-underline hover:text-white">About Param Innovations</Link></li>
+            <li><Link to="/csr-conclave" className="link-underline hover:text-white">CSR Conclave 2026</Link></li>
             <li><Link to="/faq" className="link-underline hover:text-white">FAQ</Link></li>
             <li><Link to="/contact" className="link-underline hover:text-white">Contact</Link></li>
             <li><a href="https://paramai.in" target="_blank" rel="noreferrer" className="link-underline hover:text-white">Sibling brand · Param AI</a></li>

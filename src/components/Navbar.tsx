@@ -8,6 +8,7 @@ const links = [
   { to: '/assured', label: 'ASSURED' },
   { to: '/atmanirbhar', label: 'Atmanirbhar' },
   { to: '/about', label: 'About' },
+  { to: '/csr-conclave', label: 'CSR 2026' },
   { to: '/faq', label: 'FAQ' },
 ];
 
